@@ -7,12 +7,10 @@ import fsImgMobile from '../images/home-fs-mobile.png'
 import fpImg1 from '../images/fp1.png'
 import fpProfileImg from '../images/fpProfileImg.png'
 import forwardIcon from '../images/icons/forwardIcon.png'
-// import blueForwardIcon from '../images/icons/blueForwardIcon.png'
 import auctionBg from '../images/auctionBg.png'
 import Newsletter from './Newsletter'
 import Contact from './Contact'
 import Footer from './Footer'
-// import prev from '../images/icons/prev.png'
 
 export default function Home() {
     return (
@@ -32,7 +30,7 @@ export default function Home() {
             </section>
             <section className='featured-products'>
                 <h3>Featured products</h3>
-                <div className='product'>
+                <div className='f-product'>
                     <img src={fpImg1} />
                     <div>
                         <h5>The Boolean Egyptian</h5>
@@ -50,32 +48,31 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                {/* <div className='product even'>
+                <div className='f-product'>
                     <img src={fpImg1} />
                     <div>
                         <h5>The Boolean Egyptian</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur</p>
                         <div>
                             <div className='profiles'>
-                                <img src={fpProfileImg}/>
-                                <img src={fpProfileImg}/>
-                                <img src={fpProfileImg}/>
-                                <img src={fpProfileImg}/>
-                                <img src={fpProfileImg}/>
+                                <img src={fpProfileImg} />
+                                <img src={fpProfileImg} />
+                                <img src={fpProfileImg} />
+                                <img src={fpProfileImg} />
+                                <img src={fpProfileImg} />
                             </div>
                             <p>64 major creators</p>
                             <img src={forwardIcon} />
                         </div>
                     </div>
 
-                </div> */}
+                </div>
             </section>
             <section className='upcoming-auctions'>
                 <h3>See Upcoming Auctions and Exhibitions</h3>
                 <div className='carousel' style={{ backgroundImage: `url(${auctionBg})` }}>
                     <div className='first-container'>
                         <div>
-                            <img />
                             <span>01</span>
                         </div>
                         <div>

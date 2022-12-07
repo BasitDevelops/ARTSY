@@ -11,13 +11,9 @@ import chatIcon from '../images/icons/chat.png'
 export default function Navbar() {
     const [menu, setMenu] = useState(false)
 
-    const openMenu = () => {
-        setMenu(true)
-    }
+    const openMenu = () => setMenu(true)
 
-    const closeMenu = () => {
-        setMenu(false)
-    }
+    const closeMenu = () => setMenu(false)
 
     return (
         <nav>

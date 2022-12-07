@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 export default function Marketplace() {
     return (
-        <div>
+        <div className='mp-container'>
             <div className='marketplace'>
                 <section className='first-section'>
                     <input type='text' placeholder='Search' />

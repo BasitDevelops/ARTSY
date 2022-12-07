@@ -18,7 +18,7 @@ export default function Contact() {
                 <li>High bids</li>
             </ul>
             <div>
-                <h5>Reach us</h5>
+                <h5>REACH US</h5>
                 <p><img src={mailIcon} /><span>artsystudios@gmail.com</span></p>
                 <p><img src={locationIcon} /><span>Lagos, Nigeria.</span></p>
             </div>

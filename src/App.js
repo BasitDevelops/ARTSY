@@ -8,19 +8,21 @@ import Cart from './components/Cart'
 import ShippingDetails from './components/ShippingDetails'
 import PaymentDetails from './components/PaymentDetails'
 import OrderComplete from './components/OrderComplete'
+import Auction from './components/Auction'
 
 function App() {
 
   return (
     <div>
       <Navbar />
-      {/* <Home /> */}
+      <Home />
       {/* <Marketplace /> */}
       {/* <Product /> */}
       {/* <Cart /> */}
       {/* <ShippingDetails /> */}
       {/* <PaymentDetails /> */}
-      <OrderComplete />
+      {/* <OrderComplete /> */}
+      {/* <Auction /> */}
     </div>
   )
 }
