@@ -86,11 +86,22 @@ nav {
 
 .nav-icons {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
 .nav-icons img {
     width: 1.25rem;
+}
+
+.nav-icons div {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.nav-icons div p {
+    margin-top: -10px;
 }
 
 .toggle-icon {
@@ -165,7 +176,13 @@ nav {
     gap: 2.5rem;
 }
 
+.home .f-product>img {
+    min-width: 50%;
+    max-height: 272px;
+}
+
 .home .f-product>div {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -196,8 +213,8 @@ nav {
     margin-left: -1rem;
 }
 
-.home .featured-products .product>div>div>p {
-    max-width: 193px;
+.home .featured-products .f-product>div>div>p {
+    font-weight: bolder;
     font-size: 24px;
 }
 
@@ -218,15 +235,21 @@ nav {
     border-bottom: 1px solid white;
 }
 
+.home .upcoming-auctions .carousel-container {
+    display: flex;
+    gap: 5rem;
+}
+
 .home .upcoming-auctions .carousel {
-    background-repeat: no-repeat;
-    background-size: cover;
     box-sizing: border-box;
-    padding: 2.5rem;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: darken;
     height: 500px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 2.5rem;
 }
 
 .carousel .first-container {
@@ -448,7 +471,7 @@ nav {
 
 .footer small {
     font-family: 'Rubik';
-    font-size: 24px;
+    font-size: 14px;
     opacity: 0.5;
 }
 
@@ -485,9 +508,9 @@ nav {
 .marketplace .first-section>div {
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    min-width: 915px;
+    min-width: 950px;
     background: #FFFFFF;
     box-shadow: 4px 4px 64px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -499,36 +522,13 @@ nav {
     color: #000000;
 }
 
-.marketplace .first-section>div>div {
-    min-width: 190px;
-    height: 58px;
-    border: 0.4px solid #000000;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.marketplace .first-section-mobile {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100vw;
-    height: 60px;
-    background: #FFFFFF;
-    box-shadow: 4px 4px 64px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    padding: 0 1rem;
-    display: none;
-}
-
 .marketplace .second-section {
     display: flex;
     justify-content: space-around;
 }
 
 .marketplace .filter-settings {
+    width: 225px;
     margin-top: 2.5rem;
 }
 
@@ -592,7 +592,7 @@ nav {
 
 .marketplace .products-container {
     margin-top: 1.5rem;
-    max-width: 900px;
+    width: 900px;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -609,8 +609,15 @@ nav {
     padding: 1rem;
 }
 
+.marketplace .product img {
+    width: 100%;
+    height: 75%;
+    border-radius: .5rem;
+}
+
 .marketplace .product h5 {
     font-size: 22px;
+    text-transform: uppercase;
 }
 
 .marketplace .product p {
@@ -640,10 +647,22 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.product-expand .close-icon {
+    box-sizing: border-box;
+    position: absolute;
+    right: 5rem;
+    padding: 1rem;
+}
+
+.product-expand .close-icon:hover {
+    background-color: lightgrey;
+    border-radius: 50%;
 }
 
 .product-expand .first-section {
-    height: 725px;
     box-sizing: border-box;
     border: 1px solid #333333;
     display: flex;
@@ -665,18 +684,32 @@ nav {
 }
 
 .product-expand .product-name {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2.5rem 1rem !important;
 }
 
 .product-expand .product-name h3 {
-    font-size: 45px;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .product-expand .product-name p {
-    font-family: 'STIX';
-    font-size: 40px;
+    margin: 0;
+    font-size: 30px;
+}
+
+.product-expand .product-count button {
+    background: none;
+    border-radius: .25rem;
+    font-size: 1.5rem;
+}
+
+.product-expand .product-count p {
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
 
 .product-expand .first-section .second-container .product-details {
@@ -688,8 +721,9 @@ nav {
 }
 
 .product-expand .product-details h5 {
-    font-size: 28px;
+    font-size: 24px;
     color: #616161;
+    text-transform: uppercase;
 }
 
 .product-expand .product-details h5 span {
@@ -698,12 +732,14 @@ nav {
 
 .product-expand .product-details>p {
     font-weight: bolder;
-    font-size: 24px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .product-expand .product-details>h6 {
-    font-size: 28px;
+    font-size: 22px;
     color: #000000;
+    text-transform: uppercase;
 }
 
 .product-expand .product-details>div {
@@ -715,12 +751,19 @@ nav {
 .product-expand .add-to-cart {
     box-sizing: border-box;
     background: #3341C1;
-    border: none;
+    border: 1px solid #FFFFFF;
     border-radius: 3px;
     padding: 1rem 5rem;
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 18px;
     color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.product-expand .add-to-cart:hover {
+    background: #FFFFFF;
+    border: 1px solid #3341C1;
+    color: #3341C1;
 }
 
 .product-expand .first-section .second-container .product-details .like {
@@ -883,6 +926,7 @@ nav {
 }
 
 .cart .cart-product .counter {
+    width: 100px;
     height: 32px;
     display: flex;
     justify-content: space-around;
@@ -891,10 +935,15 @@ nav {
     border-radius: .5rem;
 }
 
+.cart .cart-product .counter button {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: .25rem;
+}
+
 .cart .cart-product .counter p {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     padding: 0 .5rem;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 .cart .cart-product .second-container p {
@@ -1238,6 +1287,12 @@ nav {
 /* ORDER COMPLETE COMPONENT ENDS HERE */
 
 /* AUCTION COMPONENT STARTS HERE */
+.auction-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
 .auction {
     box-sizing: border-box;
     padding: 0 2.5rem;
@@ -1258,7 +1313,9 @@ nav {
 }
 
 .auction .auction-product {
-    background-color: #006CA2;
+    background-size: contain;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.3);
     height: 250px;
     width: 250px;
     border-radius: 10px;
@@ -1287,7 +1344,7 @@ nav {
 .auction .top-bids-container {
     box-sizing: border-box;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     overflow-x: scroll;
     padding: .5rem;
 }
@@ -1306,17 +1363,19 @@ nav {
 }
 
 .auction .top-bid img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 
 .auction .top-bid .first-container p {
     font-size: 20px;
+    text-transform: uppercase;
 }
 
 .auction .top-bid .second-container p {
     font-size: 16px;
     color: #616161;
+    text-transform: uppercase;
 }
 
 .auction .top-bid .second-container span {
@@ -1348,6 +1407,169 @@ nav {
 }
 
 /* AUCTION COMPONENT ENDS HERE */
+
+/* UPCOMING DROPS COMPONENT STARTS HERE */
+.upcoming-drops {
+    box-sizing: border-box;
+    padding: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.upcoming-drops .first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upcoming-drops .first-section h3 {
+    font-size: 35px;
+    color: #000000;
+}
+
+.upcoming-drops .first-section p {
+    font-size: 20px;
+    color: #616161;
+}
+
+.upcoming-drops .first-section button {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: .5rem 3.5rem;
+}
+
+.upcoming-drops .drops-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.upcoming-drops .drop {
+    display: flex;
+}
+
+.upcoming-drops .drop>div {
+    width: 50%;
+}
+
+.upcoming-drops .img-container {
+    box-sizing: border-box;
+    background-size: cover;
+    width: 50%;
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+}
+
+.upcoming-drops .img-container>div {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 130px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(245, 244, 244, 0.24);
+    border: 0.5px solid #FFFFFF;
+    backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.upcoming-drops .time {}
+
+.upcoming-drops .time h6 {
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.upcoming-drops .time p {
+    margin-bottom: 0;
+    font-family: 'STIX';
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.upcoming-drops .img-container button {
+    align-self: flex-end;
+    width: 100px;
+    height: 35px;
+    background: #4693ED;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.upcoming-drops .drop-details {
+    box-sizing: border-box;
+    padding: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.upcoming-drops .drop-details .tag {
+    margin: 0;
+    width: 180px;
+    height: 40px;
+    background: #4693ED;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    color: #FFFFFF;
+}
+
+.upcoming-drops .drop-details p {
+    font-size: 20px;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.upcoming-drops .drop-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.upcoming-drops .drop-details h4 {
+    font-size: 30px;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.upcoming-drops .drop-details h5 {
+    width: 75%;
+    font-size: 20px;
+    color: #616161;
+}
+
+.upcoming-drops .drop-details h6 {
+    font-size: 22px;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.upcoming-drops .drop-details span {
+    color: rgba(0, 108, 162, 1);
+}
+
+.upcoming-drops .drop-details a {
+    font-size: 18px;
+    text-decoration-line: underline;
+    color: #006CA2;
+}
+
+/* UPCOMING DROPS COMPONENT ENDS HERE */
 
 
 @media screen and (max-width: 480px) {
@@ -1435,18 +1657,30 @@ nav {
         flex-direction: column;
     }
 
+    .home .f-product>img {
+        min-width: 100%;
+        max-height: 272px;
+    }
+
+    .home .f-product>div {
+        width: 100%;
+    }
+
     .home .f-product>div>p {
-        max-width: 343px;
         font-size: 15px;
         color: #616161;
     }
 
     .home .profiles img {
-        width: 2.5rem;
+        max-width: 2rem;
     }
 
-    .home .f-product>div>div>p {
+    .home .featured-products .f-product>div>div>p {
         font-size: 16px;
+    }
+
+    .home .f-product>div>div>img {
+        width: 34px;
     }
 
     .home .upcoming-auctions {
@@ -1458,6 +1692,7 @@ nav {
     }
 
     .home .upcoming-auctions .carousel {
+        background-size: contain;
         padding: 1rem;
         display: flex;
         flex-direction: column;
@@ -1562,7 +1797,7 @@ nav {
 
     /* FOOTER COMPONENT STARTS HERE */
     .footer small {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     /* FOOTER COMPONENT ENDS HERE */
@@ -1575,12 +1810,13 @@ nav {
         align-items: center;
     }
 
-    .marketplace .first-section {
-        display: none;
+    .marketplace .first-section,
+    .marketplace .first-section>input {
+        width: 100%;
     }
 
-    .marketplace .first-section-mobile {
-        display: flex;
+    .marketplace .first-section>div {
+        display: none;
     }
 
     .marketplace .filter-settings {
@@ -1592,7 +1828,7 @@ nav {
     }
 
     .marketplace .products-container {
-        min-width: 100%;
+        width: 100%;
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -1613,6 +1849,7 @@ nav {
 
     .marketplace .product img {
         min-width: 100%;
+        height: 230px;
     }
 
     .marketplace .product h5,
@@ -1628,6 +1865,11 @@ nav {
     /* MARKETPLACE COMPONENT ENDS HERE */
 
     /* PRODUCT COMPONENT STARTS HERE */
+    .product-expand .close-icon {
+        position: relative;
+        right: 0;
+    }
+
     .product-expand .first-section {
         min-width: 100%;
         height: auto;
@@ -1895,12 +2137,21 @@ nav {
         font-size: 18px;
     }
 
+    .auction .auction-products-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auction .auction-product {
+        min-width: 100%;
+    }
+
     .auction .auction-product p {
         font-size: 14px;
     }
 
-    .auction .top-bids-container {
-        flex-direction: column;
+    .auction .top-bid {
+        min-width: 100%;
     }
 
     .auction .top-bid img {
@@ -1919,4 +2170,109 @@ nav {
     }
 
     /* AUCTION COMPONENT ENDS HERE */
+
+    /* UPCOMING DROPS COMPONENT STARTS HERE */
+    .upcoming-drops {
+        padding: 1rem;
+    }
+
+    .upcoming-drops .first-section {
+        margin-top: 2.5rem;
+    }
+
+    .upcoming-drops .first-section h3 {
+        font-size: 25px;
+    }
+
+    .upcoming-drops .first-section p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .upcoming-drops .first-section button {
+        font-size: 15px;
+    }
+
+    .upcoming-drops .drops-container {}
+
+    .upcoming-drops .drop {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .upcoming-drops .drop>div {
+        min-width: 100%;
+    }
+
+    .upcoming-drops .img-container {
+        width: 100%;
+        height: 350px;
+    }
+
+    .upcoming-drops .img-container>div {
+        width: 85%;
+        height: auto;
+    }
+
+    .upcoming-drops .time {}
+
+    .upcoming-drops .time h6,
+    .upcoming-drops .time p {
+        font-size: 18px;
+    }
+
+    .upcoming-drops .img-container button {
+        display: none;
+    }
+
+    .upcoming-drops .drop-details {
+        padding: 0;
+    }
+
+    .upcoming-drops .drop-details .tag {
+        width: 150px;
+    }
+
+    .upcoming-drops .drop-details p {
+        font-size: 18px;
+    }
+
+    .upcoming-drops .drop-details h4 {
+        font-size: 28px;
+    }
+
+    .upcoming-drops .drop-details h5 {
+        width: 100%;
+        font-size: 18px;
+        color: #616161;
+    }
+
+    .upcoming-drops .drop-details h6 {
+        font-size: 20px;
+    }
+
+    .upcoming-drops .drop-details a {
+        font-size: 16px;
+    }
+
+    /* UPCOMING DROPS COMPONENT ENDS HERE */
+}
+
+.carousel-btns {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.current-page {
+    border-bottom: 3px solid black;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+button {
+    cursor: pointer;
 }

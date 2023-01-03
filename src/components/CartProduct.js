@@ -1,50 +1,38 @@
-import React from 'react'
-import productCompImg from '../images/productCompImg.png'
+import React, { useState, useContext } from 'react'
+import CartContext from '../CartContext'
+import CloseIcon from '../images/icons/CloseIcon'
 
-export default function CartProduct() {
+export default function CartProduct(props) {
+    //STATES
+    const [count, setCount] = useState(props.item.count)
+
+    //FUNCTION
+    const decreaseCount = () => setCount(prevState => prevState - 1)
+    const increaseCount = () => setCount(prevState => prevState + 1)
+
+    const { removeFromCart } = useContext(CartContext)
+
     return (
         <>
             <div className='cart-product'>
-                <img src={productCompImg} />
+                <img src={props.item.url} />
                 <div>
                     <div className='first-container'>
                         <div>
                             <p className='category'>Editorials</p>
-                            <h5>Philomena ‘22</h5>
-                            <h6>Clearamane</h6>
-                            <p className='size'>Size : <span>200 ft</span></p>
+                            <h5 className='uppercase'>{props.item.name}</h5>
+                            <h6 className='uppercase'>{props.item.creator}</h6>
+                            <p className='size'>Size : <span>{props.item.size.ft} ft</span></p>
                         </div>
                         <div className='counter'>
-                            <button>-</button>
-                            <p>Count</p>
-                            <button>+</button>
+                            <button onClick={decreaseCount}>-</button>
+                            <p>{count}</p>
+                            <button onClick={increaseCount}>+</button>
                         </div>
                     </div>
                     <div className='second-container'>
-                        <i>close</i>
-                        <p>$35.50</p>
-                    </div>
-                </div>
-            </div>
-            <div className='cart-product'>
-                <img src={productCompImg} />
-                <div>
-                    <div className='first-container'>
-                        <div>
-                            <p className='category'>Editorials</p>
-                            <h5>Philomena ‘22</h5>
-                            <h6>Clearamane</h6>
-                            <p className='size'>Size : <span>200 ft</span></p>
-                        </div>
-                        <div className='counter'>
-                            <button>-</button>
-                            <p>Count</p>
-                            <button>+</button>
-                        </div>
-                    </div>
-                    <div className='second-container'>
-                        <i>close</i>
-                        <p>$35.50</p>
+                        <CloseIcon onClick={() => removeFromCart(props.item)} />
+                        <p>$ {(props.item.price.usd * count).toFixed(2)}</p>
                     </div>
                 </div>
             </div>

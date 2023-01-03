@@ -1,4 +1,6 @@
 import React from 'react'
+// import { useState, useEffect } from 'react'
+import { CartProvider } from './CartContext'
 import './style.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
@@ -9,20 +11,27 @@ import ShippingDetails from './components/ShippingDetails'
 import PaymentDetails from './components/PaymentDetails'
 import OrderComplete from './components/OrderComplete'
 import Auction from './components/Auction'
+import UpcomingDrops from './components/UpcomingDrops'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
 
   return (
     <div>
-      <Navbar />
-      <Home />
-      {/* <Marketplace /> */}
       {/* <Product /> */}
       {/* <Cart /> */}
       {/* <ShippingDetails /> */}
       {/* <PaymentDetails /> */}
       {/* <OrderComplete /> */}
-      {/* <Auction /> */}
+      <CartProvider>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/marketplace' element={<Marketplace />} />
+          <Route path='/auction' element={<Auction />} />
+          <Route path='/drops' element={<UpcomingDrops />} />
+        </Routes>
+      </CartProvider>
     </div>
   )
 }

@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CartContext from '../CartContext'
 import CartProduct from './CartProduct'
 import ProductsInCart from './ProductsInCart'
 
 export default function Cart() {
+    const { cartItems } = useContext(CartContext)
+
+    // console.log(cartItems)
     return (
         <div className='cart'>
             {/* <section className='first-section'>
@@ -13,7 +17,9 @@ export default function Cart() {
                 </ul>
             </section> */}
             <section className='cart-products-container'>
-                <CartProduct />
+                {
+                    cartItems.map(item => <CartProduct key={item.id} item={item} />)
+                }
             </section>
             <section className='checkout'>
                 <div className='first-container'>
@@ -27,3 +33,4 @@ export default function Cart() {
         </div>
     )
 }
+
