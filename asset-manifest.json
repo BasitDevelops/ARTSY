@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ARTSY/static/css/main.ed743dd2.css",
+    "main.js": "/ARTSY/static/js/main.dffd45e2.js",
+    "static/media/Inter-VariableFont_slnt,wght copy.ttf": "/ARTSY/static/media/Inter-VariableFont_slnt,wght copy.aadb65ac45347ff46699.ttf",
+    "static/media/Cardo-Regular copy.ttf": "/ARTSY/static/media/Cardo-Regular copy.4ad75d4da97e1cf6655b.ttf",
+    "static/media/Rectangle 233.png": "/ARTSY/static/media/Rectangle 233.fbf10a04b2dbebaff3c1.png",
+    "static/media/STIXTwoText-Regular copy.ttf": "/ARTSY/static/media/STIXTwoText-Regular copy.3e9e31855c6e0a948f5a.ttf",
+    "static/media/Rectangle 232.png": "/ARTSY/static/media/Rectangle 232.6595b2bc64779c1a9d8b.png",
+    "static/media/Rubik-VariableFont_wght copy.ttf": "/ARTSY/static/media/Rubik-VariableFont_wght copy.5cbae960ce7cf02e8bd8.ttf",
+    "static/media/home-fs-mobile.png": "/ARTSY/static/media/home-fs-mobile.f6d02d38e037fc09b850.png",
+    "static/media/Rectangle 231.png": "/ARTSY/static/media/Rectangle 231.f159cbb20d8acf9f737f.png",
+    "static/media/Rectangle 230.png": "/ARTSY/static/media/Rectangle 230.e1edbacede6e9e347c93.png",
+    "static/media/Poppins-Regular copy.ttf": "/ARTSY/static/media/Poppins-Regular copy.35d26b781dc5fda684cc.ttf",
+    "static/media/Baskervville-Regular copy.ttf": "/ARTSY/static/media/Baskervville-Regular copy.10997c3801cafead0fe2.ttf",
+    "static/media/FontsFree-Net-ClashDisplay-Variable.ttf": "/ARTSY/static/media/FontsFree-Net-ClashDisplay-Variable.e7f67b72cbf79f80c9c7.ttf",
+    "static/media/Bellefair-Regular copy.ttf": "/ARTSY/static/media/Bellefair-Regular copy.6b84d927d5ad108e909a.ttf",
+    "static/media/Satoshi-Light copy.otf": "/ARTSY/static/media/Satoshi-Light copy.66b6be60222486fa8673.otf",
+    "static/media/orderComplete.png": "/ARTSY/static/media/orderComplete.5a681c51ce182fda5030.png",
+    "index.html": "/ARTSY/index.html",
+    "main.ed743dd2.css.map": "/ARTSY/static/css/main.ed743dd2.css.map",
+    "main.dffd45e2.js.map": "/ARTSY/static/js/main.dffd45e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed743dd2.css",
+    "static/js/main.dffd45e2.js"
+  ]
+}
