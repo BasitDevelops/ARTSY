@@ -755,6 +755,7 @@ nav {
 }
 
 .product-expand .add-to-cart {
+    min-width: 100%;
     box-sizing: border-box;
     background: #3341C1;
     border: 1px solid #FFFFFF;
@@ -1495,8 +1496,6 @@ nav {
     padding: 1rem;
 }
 
-.upcoming-drops .time {}
-
 .upcoming-drops .time h6 {
     font-size: 22px;
     color: #FFFFFF;
@@ -1920,14 +1919,6 @@ nav {
     .product-expand .product-details p,
     .product-expand .product-details h6 {
         font-size: 18px;
-    }
-
-    .product-expand .add-to-cart {
-        min-width: 85%;
-    }
-
-    .product-expand .like {
-        min-width: 15%;
     }
 
     .product-expand .info {

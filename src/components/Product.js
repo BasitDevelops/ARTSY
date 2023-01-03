@@ -34,7 +34,7 @@ export default function Product(props) {
                                 <div className='product-details'>
                                     <h5>Creator : <span>{props.selectedItem.creator}</span></h5>
                                     <p>{props.selectedItem.origin}</p>
-                                    <h6>Total views: <span>{props.selectedItem.views}</span></h6>
+                                    <h6>Total views : <span>{props.selectedItem.views}</span></h6>
                                     <div className='product-count'>
                                         <button onClick={decreaseCount}>-</button>
                                         <p>{count}</p>
@@ -42,7 +42,6 @@ export default function Product(props) {
                                     </div>
                                     <div>
                                         <button className='add-to-cart' onClick={() => addToCart({ ...props.selectedItem, count: count })}>Add to cart</button>
-                                        <button className='like'>Like</button>
                                     </div>
                                 </div>
                                 <div className='product-desc'>

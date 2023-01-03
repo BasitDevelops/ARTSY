@@ -18,7 +18,7 @@ export default function Marketplace() {
     const [moreProductsFlag, setMoreProductsFlag] = useState(false)
 
     useEffect(() => {
-        fetch('https://gist.githubusercontent.com/BasitDevelops/9e0020bc5bfb444d6fed4ca84595c146/raw/e4818c8fa14d1dd3679c6d9a99e36cdf98089947/products.json')
+        fetch('https://gist.githubusercontent.com/BasitDevelops/9e0020bc5bfb444d6fed4ca84595c146/raw/ad3985705a52397ddd061e6fd342e7d1b1fe05bd/products.json')
             .then(response => response.json())
             .then(mpData => setMarketplaceProducts(mpData.products))
     }, [])

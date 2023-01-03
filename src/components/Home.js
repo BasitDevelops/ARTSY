@@ -31,7 +31,7 @@ export default function Home() {
     }, [])
 
     useEffect(() => {
-        const cData = fetch('https://gist.githubusercontent.com/BasitDevelops/9e0020bc5bfb444d6fed4ca84595c146/raw/f8e1e0651d0d89c9e08f125c633c5e7e7e7d0865/carousel.json')
+        const cData = fetch('https://gist.githubusercontent.com/BasitDevelops/9e0020bc5bfb444d6fed4ca84595c146/raw/ad3985705a52397ddd061e6fd342e7d1b1fe05bd/carousel.json')
             .then(response => response.json())
             .then(cData => setCarouselData(cData.carousel))
     }, [])
