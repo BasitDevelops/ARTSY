@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ARTSY/static/css/main.ed743dd2.css",
-    "main.js": "/ARTSY/static/js/main.dffd45e2.js",
+    "main.css": "/ARTSY/static/css/main.534921cc.css",
+    "main.js": "/ARTSY/static/js/main.1fa667ee.js",
     "static/media/Inter-VariableFont_slnt,wght copy.ttf": "/ARTSY/static/media/Inter-VariableFont_slnt,wght copy.aadb65ac45347ff46699.ttf",
     "static/media/Cardo-Regular copy.ttf": "/ARTSY/static/media/Cardo-Regular copy.4ad75d4da97e1cf6655b.ttf",
     "static/media/Rectangle 233.png": "/ARTSY/static/media/Rectangle 233.fbf10a04b2dbebaff3c1.png",
@@ -18,11 +18,11 @@
     "static/media/Satoshi-Light copy.otf": "/ARTSY/static/media/Satoshi-Light copy.66b6be60222486fa8673.otf",
     "static/media/orderComplete.png": "/ARTSY/static/media/orderComplete.5a681c51ce182fda5030.png",
     "index.html": "/ARTSY/index.html",
-    "main.ed743dd2.css.map": "/ARTSY/static/css/main.ed743dd2.css.map",
-    "main.dffd45e2.js.map": "/ARTSY/static/js/main.dffd45e2.js.map"
+    "main.534921cc.css.map": "/ARTSY/static/css/main.534921cc.css.map",
+    "main.1fa667ee.js.map": "/ARTSY/static/js/main.1fa667ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed743dd2.css",
-    "static/js/main.dffd45e2.js"
+    "static/css/main.534921cc.css",
+    "static/js/main.1fa667ee.js"
   ]
 }
