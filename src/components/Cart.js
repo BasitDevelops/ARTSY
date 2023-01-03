@@ -2,20 +2,15 @@ import React, { useContext } from 'react'
 import CartContext from '../CartContext'
 import CartProduct from './CartProduct'
 import ProductsInCart from './ProductsInCart'
+import { useNavigate } from 'react-router-dom'
 
 export default function Cart() {
-    const { cartItems } = useContext(CartContext)
+    const { cartItems, resetCartFlag } = useContext(CartContext)
 
-    // console.log(cartItems)
+    const navigate = useNavigate()
+
     return (
         <div className='cart'>
-            {/* <section className='first-section'>
-                <ul>
-                    <li><a href=''>Shopping cart</a></li>
-                    <li><a href=''>Shipping details</a></li>
-                    <li><a href=''>Payment details</a></li>
-                </ul>
-            </section> */}
             <section className='cart-products-container'>
                 {
                     cartItems.map(item => <CartProduct key={item.id} item={item} />)
@@ -23,8 +18,11 @@ export default function Cart() {
             </section>
             <section className='checkout'>
                 <div className='first-container'>
-                    <button>Proceed to checkout</button>
-                    <a href='#'>Continue shopping</a>
+                    <button onClick={() => {
+                        navigate('/paymentdetails')
+                        resetCartFlag()
+                    }}>Proceed to checkout</button>
+                    <a onClick={() => resetCartFlag()}>Continue shopping</a>
                 </div>
                 <div className='second-container'>
                     <ProductsInCart />

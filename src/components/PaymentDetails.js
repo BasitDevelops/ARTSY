@@ -1,8 +1,11 @@
 import React from 'react'
 import metaMask from '../images/icons/MetaMask.png'
 import ProductsInCart from './ProductsInCart'
+import { useNavigate } from 'react-router-dom'
 
 export default function PaymentDetails() {
+    const navigate = useNavigate()
+
     return (
         <div className='payment-details'>
             <section className='first-section'>
@@ -54,9 +57,8 @@ export default function PaymentDetails() {
                                 <p>Get updates about new drops & exclusive offers</p>
                             </div >
                         </div>
-                        {/* <a href='#'>Go back to cart </a> */}
                     </div>
-                    <button>Confirm</button>
+                    <button onClick={() => navigate('/ordercomplete')}>Confirm</button>
                 </div>
                 <div className='second-container'>
                     <h3>Payment Summary</h3>
@@ -65,7 +67,7 @@ export default function PaymentDetails() {
                         <p>Actively linked to Yaba, Lagos Nigeria.</p>
                     </div>
                     <div>
-                        <p>Expected arrival date: Between 22nd September and 26th September 20222</p>
+                        <p>Expected arrival date : Between 22nd - 26th September {new Date().getFullYear()}</p>
                     </div>
                     <div className='products-in-cart'>
                         <ProductsInCart />

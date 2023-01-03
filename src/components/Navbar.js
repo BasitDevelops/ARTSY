@@ -12,13 +12,6 @@ import { Link, useLocation } from 'react-router-dom'
 import CartContext from '../CartContext'
 
 export default function Navbar() {
-    //STATES
-    // const [menu, setMenu] = useState(false)
-
-    //FUNCTIONS
-    // const openMenu = () => setMenu(true)
-    // const closeMenu = () => setMenu(false)
-
     const location = useLocation()
 
     const { menu, cartFlag, cartItems, openMenu, closeMenu, openCart, resetCartFlag } = useContext(CartContext)

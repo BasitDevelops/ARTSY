@@ -80,19 +80,6 @@ export default function Marketplace() {
                                                 <p>${filterByPriceValue}.00 - $500.00</p>
                                                 <input onChange={filterByPrice} type='range' value={filterByPriceValue} min={0} max={500} />
                                             </div>
-                                            <div className='artist'>
-                                                <h5>By artist</h5>
-                                                <ul>
-                                                    <li><p>All</p></li>
-                                                    <li><p>Below $100.00</p></li>
-                                                    <li><p>$100.00 - $150.00</p></li>
-                                                    <li><p>$150.00 - $200.00</p></li>
-                                                    <li><p>Above $200.00</p></li>
-                                                </ul>
-                                            </div>
-                                            <div className='year'>
-                                                <h5>Collection year</h5>
-                                            </div>
                                         </div>
                                         <div className='products-container'>
                                             {

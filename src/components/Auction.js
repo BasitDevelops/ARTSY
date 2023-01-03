@@ -46,13 +46,12 @@ export default function Auction() {
                                         return (
                                             <div className='top-bid'>
                                                 <div className='first-container'>
-                                                    <i>like</i>
                                                     <img src={item.url} />
                                                     <p>{item.name}</p>
                                                 </div>
                                                 <div className='second-container'>
                                                     <p>Creator : <span>{item.creator}</span></p>
-                                                    <p>Date : <span>{`${item.date.day}/${item.date.month}/${item.date.year}`}</span></p>
+                                                    <p>Date : <span>{`${item.date.day}/${item.date.month}/${new Date().getFullYear()}`}</span></p>
                                                     <p>Highest bid : <span>{item.bid.highest.eth}</span></p>
                                                     <div>
                                                         <div>

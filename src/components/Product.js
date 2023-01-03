@@ -1,10 +1,7 @@
 import React, { useState, useContext } from 'react'
 import CartContext from '../CartContext'
 import closeIcon from '../images/icons/close.png'
-import Cart from './Cart'
 import Marketplace from './Marketplace'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default function Product(props) {
     //STATES
@@ -17,8 +14,6 @@ export default function Product(props) {
     const increaseCount = () => setCount(prevState => prevState + 1)
     
     const { addToCart } = useContext(CartContext)
-
-    const notify = () => toast("Wow so easy!");
 
     return (
         <>
@@ -59,28 +54,6 @@ export default function Product(props) {
                                 <div className='product-status'>
                                     <p className='info'>Status</p>
                                 </div>
-                            </div>
-                        </section>
-                        <section className='second-section'>
-                            <div className='first-container'>
-                                <p>Explore more from this collection</p>
-                                <div>
-                                    <button>prev</button>
-                                    <button>next</button>
-                                </div>
-                            </div>
-                            <div className='same-collection-products'>
-                                <div className='same-collection-product'>
-                                    <i>like</i>
-                                    <img src='' />
-                                    <div>
-                                        <p>Sassy</p>
-                                        <p>$250</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='explore'>
-                                <button>Explore all</button>
                             </div>
                         </section>
                     </div>

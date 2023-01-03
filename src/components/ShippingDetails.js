@@ -9,7 +9,7 @@ export default function ShippingDetails() {
 
             </section>
             <section className='second-section'>
-               <div className='form'>
+                <div className='form'>
                     <div>
                         <p>Your email</p>
                         <input type='text' />
@@ -49,7 +49,7 @@ export default function ShippingDetails() {
                 </div>
                 <div className='cart'>
                     <section className='cart-products-container'>
-                        <CartProduct />
+                        {/* <CartProduct /> */}
                     </section>
                     <section className='checkout'>
                         <div className='second-container'>
