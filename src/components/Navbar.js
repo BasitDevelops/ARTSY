@@ -27,7 +27,7 @@ export default function Navbar() {
                             <img src={logo} alt='logo' />
                             <img src={closeIcon} alt='closeIcon' className='close-icon' onClick={closeMenu} />
                         </div>
-                        <li><Link to='/' onClick={resetCartFlag} className={location.pathname === '/' && 'current-page'}>Home</Link></li>
+                        <li><Link to='/ARTSY' onClick={resetCartFlag} className={location.pathname === '/ARTSY' && 'current-page'}>Home</Link></li>
                         <li><Link to='/marketplace' onClick={resetCartFlag} className={location.pathname === '/marketplace' && 'current-page'}>Marketplace</Link></li>
                         <li><Link to='/auction' onClick={resetCartFlag} className={location.pathname === '/auction' && 'current-page'}>Auctions</Link></li>
                         <li><Link to='/drops' onClick={resetCartFlag} className={location.pathname === '/drops' && 'current-page'}>Drop</Link></li>
