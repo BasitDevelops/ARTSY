@@ -19,7 +19,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/ARTSY' element={<Home />} />
           <Route path='/marketplace' element={<Marketplace />} />
           <Route path='/auction' element={<Auction />} />
           <Route path='/drops' element={<UpcomingDrops />} />

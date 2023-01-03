@@ -1704,6 +1704,8 @@ nav {
 
     .home .upcoming-auctions .carousel {
         background-size: contain;
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.85);
         padding: 1rem;
         display: flex;
         flex-direction: column;
